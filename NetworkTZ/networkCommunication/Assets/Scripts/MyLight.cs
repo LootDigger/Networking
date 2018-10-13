@@ -9,16 +9,13 @@ public class MyLight : MonoBehaviour
     #region Private fields
 
     private bool isLighterActive = false;
-
-    #endregion
-
-
-    #region Serializable fields
-
-    // [SerializeField]
     private Light light;
 
     #endregion
+
+
+
+    #region UnityLifecycle
 
     void Awake()
     {
@@ -29,7 +26,7 @@ public class MyLight : MonoBehaviour
 
     }
 
-
+    #endregion
 
     #region Private methods
 

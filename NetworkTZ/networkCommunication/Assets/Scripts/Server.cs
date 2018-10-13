@@ -8,17 +8,27 @@ using UnityEngine;
 
 public class Server : MonoBehaviour
 {
-    private  List<ServerClient> clients;
+    #region Private fields
+    
+    private List<ServerClient> clients;
     private List<ServerClient> disconnectedClients;
 
-    public int port = 2018;
     private TcpListener listener;
     private bool isServerStarted = false;
     private StreamWriter writer;
 
+    #endregion
+
+
+    #region public fields
+
+    public int port = 2018;
+
+    #endregion
 
 
     #region Unity LifeCycle
+
     void Start()
     {
         clients = new List<ServerClient>();
@@ -77,16 +87,7 @@ public class Server : MonoBehaviour
             }
         }
 
-
-
-        if(Input.GetKey(KeyCode.S))
-        {
-            Broadcast("hello player", clients);
-
-        }
-
-
-
+        
     }
 
 
@@ -195,14 +196,23 @@ public class Server : MonoBehaviour
 
 public class ServerClient
 {
+    #region public fields
+
     public TcpClient tcp;
     public string clientName;
-   public ServerClient(TcpClient value)
+    
+    #endregion
+
+
+    #region Private methods
+
+    public ServerClient(TcpClient value)
     {
         tcp = value;
         clientName = "Player";
-
     }
+
+    #endregion
 
 
 }

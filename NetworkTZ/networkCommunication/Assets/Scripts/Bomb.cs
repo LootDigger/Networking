@@ -18,6 +18,9 @@ public class Bomb : MonoBehaviour {
 
     #endregion
 
+
+    #region Unity LifeCycle
+
     void Awake()
     {
         explosion = gameObject.GetComponent<ParticleSystem>();
@@ -26,8 +29,9 @@ public class Bomb : MonoBehaviour {
 
     }
 
+    #endregion
 
-
+    
     #region Private methods
 
     private void MakeExplosion()

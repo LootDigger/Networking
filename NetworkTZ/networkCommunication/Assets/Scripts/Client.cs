@@ -36,9 +36,27 @@ public class Client : MonoBehaviour
 
     #region Public fields
 
-   
+
 
     #endregion
+
+
+    #region Public methods
+    
+    public void TurnLightOn()
+    {
+        Broadcast("turnLight");
+
+
+    }
+
+
+    public void MakeExplosion()
+    {
+        Broadcast("explosion");
+    }
+
+
 
     public void ConnectToServer()
     {
@@ -75,7 +93,10 @@ public class Client : MonoBehaviour
 
     }
 
+    #endregion
 
+
+    #region UnityLifecycle
 
     void Update()
     {
@@ -96,17 +117,11 @@ public class Client : MonoBehaviour
 
 
 
-      
-            
-       
-
-       
-        
-        
-
     }
+    #endregion
+    
 
-
+    #region private methods
 
     private void GetIPPort()
     {
@@ -146,19 +161,6 @@ public class Client : MonoBehaviour
     }
 
 
-
-    public void TurnLightOn()
-    {
-        Broadcast("turnLight");
-
-
-    }
-
-
-    public void MakeExplosion()
-    {
-        Broadcast("explosion");
-    }
-
+    #endregion
 
 }

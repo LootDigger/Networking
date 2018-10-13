@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-
-
     #region Serializeable fields
 
     [SerializeField]
@@ -18,19 +16,15 @@ public class UIController : MonoBehaviour
 
 
     #region UnityLifecycle
-
-
+    
     void Start()
     {
         EventController.clientJoinServer += HideConnectUI;
         EventController.clientJoinServer += ShowCommunicationUI;
     }
 
-
     #endregion
-
-
-
+    
 
     #region private methods
 
